@@ -1,8 +1,5 @@
 # OTP Email Sender
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![npm Version](https://img.shields.io/npm/v/email-otp-sender.svg)](https://www.npmjs.com/package/email-otp-sender)
-
 A simple and lightweight npm package for sending one-time passwords (OTPs) via email using Nodemailer.
 
 ## Features
