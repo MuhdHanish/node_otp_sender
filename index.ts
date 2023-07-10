@@ -1,19 +1,14 @@
 const nodemailer = require("nodemailer");
 
 const sendOtpEmail = (
-  senderEmail,
-  senderPassword,
-  recipientEmail,
-  subject
-)=> {
-  
+  senderEmail: string,
+  senderPassword: string,
+  recipientEmail: string,
+  subject: string
+): Promise<{otp: number, message: string}>=> {
+
   return new Promise((resolve, reject) => {
-    if (
-      !senderEmail.length ||
-      !senderPassword.length ||
-      !recipientEmail.length ||
-      !subject.length
-    ) {
+    if (!senderEmail || !senderPassword || !recipientEmail || !subject) {
       reject(
         "Please provide valid details (senderEmail, senderPassword, recipientEmail, subject)."
       );
@@ -91,18 +86,15 @@ const sendOtpEmail = (
     `,
       };
 
-      transporter.sendMail(
-        mailOptions,
-        function (error, info) {
-          if (error) {
-            reject({ error, message: "Inavlid sender-email or password" });
-          } else {
-            resolve({ otp, message: "OTP sended successfully" });
-          }
+      transporter.sendMail(mailOptions, function (error: Error, info: any) {
+        if (error) {
+          reject({ error, message: "Inavlid sender-email or password" });
+        } else {
+          resolve({ otp, message: "OTP sent successfully" });
         }
-      );
+      });
     }
   });
 };
 
-module.exports = sendOtpEmail;
+export default sendOtpEmail;

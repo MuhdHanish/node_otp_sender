@@ -1,6 +1,6 @@
 {
   "name": "email-otp-sender",
-  "version": "1.0.4",
+  "version": "1.0.13",
   "description": "This is a simple package that used to send email-otp using node-mailer",
   "main": "index.js",
   "scripts": {
@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/MuhdHanish/Otp-Sender-Package#readme",
   "dependencies": {
-    "nodemailer": "^6.9.3"
+    "nodemailer": "^6.9.3",
+    "ts-node": "^10.9.1"
   }
 }

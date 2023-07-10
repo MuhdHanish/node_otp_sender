@@ -1,4 +1,7 @@
-# OTP Email Sender
+# Email OTP Sender
+
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![npm Version](https://img.shields.io/npm/v/email-otp-sender.svg)](https://www.npmjs.com/package/otp-email-sender)
 
 A simple and lightweight npm package for sending one-time passwords (OTPs) via email using Nodemailer.
 
@@ -20,10 +23,9 @@ npm install email-otp-sender
 
 ## Usage
 
-Require the package in your code:
+```javascript
 
-const sendOtpEmail = require('email-otp-sender');
-Provide the necessary details and call the sendOtpEmail function:
+import sendOtpEmail from 'email-otp-sender';
 
 const senderEmail = 'your-email@example.com';
 const senderPassword = 'your-email-password';
@@ -32,10 +34,16 @@ const subject = 'OTP Verification';
 
 sendOtpEmail(senderEmail, senderPassword, recipientEmail, subject)
   .then((response) => {
-    console.log(response.message);
+    console.log(response);
   })
   .catch((error) => {
     console.error('Error:', error);
   });
-  
-Make sure to replace your-email@example.com with your actual sender email, your-email-password with the password of your sender email, recipient-email@example.com with the recipient's email address, and OTP Verification with your desired subject.
+```
+
+Make sure to replace 
+
+- your-email@example.com with your actual sender email
+- your-email-password with the password of your sender email
+- recipient-email@example.com with the recipient's email address
+- OTP Verification with your desired subject.
