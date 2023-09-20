@@ -4,7 +4,8 @@
   "description": "This is a simple package that used to send email-otp using node-mailer",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -outDir dist"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,9 @@
     "sender",
     "email",
     "authentication",
-    "security"
+    "security",
+    "JavaScript",
+    "TypeScript"
   ],
   "author": "Muhd Hanish",
   "license": "ISC",
@@ -27,5 +30,9 @@
   "homepage": "https://github.com/MuhdHanish/Otp-Sender-Package#readme",
   "dependencies": {
     "nodemailer": "^6.9.3"
+  },
+  "devDependencies": {
+    "@types/nodemailer": "^6.4.10",
+    "typescript": "^5.2.2"
   }
 }
