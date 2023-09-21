@@ -1,6 +1,6 @@
 {
   "name": "node-otp-sender",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "This is a simple package that used to send email-otp using node-mailer",
   "main": "index.js",
   "scripts": {
