@@ -24,9 +24,9 @@ npm install node-otp-sender
 ## Usage
 
 ```typescript
-import { nodeOtpSender, OtpSenderConfig } from 'node-otp-sender';
+import { nodeOtpSender } from 'node-otp-sender';
 
-const config: OtpSenderConfig = {
+const config = {
   senderEmail: 'your-email@example.com',
   senderPassword: 'your-email-password',
   recipientEmail: 'recipient-email@example.com',

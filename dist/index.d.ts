@@ -1,4 +1,4 @@
-export interface OtpSenderConfig {
+interface OtpSenderConfig {
     senderEmail: string;
     senderPassword: string;
     recipientEmail: string;
@@ -27,3 +27,4 @@ export declare const nodeOtpSender: ({ senderEmail, senderPassword, recipientEma
     otp: number;
     message: string;
 }>;
+export {};
