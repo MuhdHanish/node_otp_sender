@@ -1,3 +1,12 @@
+export interface OtpSenderConfig {
+    senderEmail: string;
+    senderPassword: string;
+    recipientEmail: string;
+    subject: string;
+    length?: number;
+    maxRetries?: number;
+    retryDelay?: number;
+}
 /**
  * Sends an OTP email with the provided details.
  *
@@ -14,15 +23,7 @@
  *  - `otp`: The generated OTP as a number.
  *  - `message`: A message indicating the OTP was sent successfully.
  */
-export declare const nodeOtpSender: ({ senderEmail, senderPassword, recipientEmail, subject, length, maxRetries, retryDelay }: {
-    senderEmail: string;
-    senderPassword: string;
-    recipientEmail: string;
-    subject: string;
-    length?: number;
-    maxRetries?: number;
-    retryDelay?: number;
-}) => Promise<{
+export declare const nodeOtpSender: ({ senderEmail, senderPassword, recipientEmail, subject, length, maxRetries, retryDelay }?: Partial<OtpSenderConfig>) => Promise<{
     otp: number;
     message: string;
 }>;

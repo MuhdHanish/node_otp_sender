@@ -46,7 +46,10 @@ const generateSecureOtp = (length) => {
  *  - `otp`: The generated OTP as a number.
  *  - `message`: A message indicating the OTP was sent successfully.
  */
-const nodeOtpSender = ({ senderEmail, senderPassword, recipientEmail, subject, length = 4, maxRetries = 3, retryDelay = 1000 }) => {
+const nodeOtpSender = ({ senderEmail, senderPassword, recipientEmail, subject, length = 4, maxRetries = 3, retryDelay = 1000 } = {}) => {
+    if (!senderEmail || !senderPassword || !recipientEmail || !subject) {
+        return Promise.reject(new Error("Missing required parameters: senderEmail, senderPassword, recipientEmail, and subject must all be provided."));
+    }
     return new Promise((resolve, reject) => __awaiter(void 0, void 0, void 0, function* () {
         let retries = 0;
         const retryableErrors = [
