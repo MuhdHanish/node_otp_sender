@@ -31,21 +31,22 @@ const generateSecureOtp = (length) => {
     return parseInt(otp, 10);
 };
 /**
- * Sends an OTP email with a specified subject and recipient details.
+ * Sends an OTP email with the provided details.
  *
- * @param senderEmail - The sender's email address.
- * @param senderPassword - The sender's email password.
- * @param recipientEmail - The recipient's email address.
- * @param subject - The subject of the email.
- * @param length - Optional. The length of the OTP to generate. Defaults to 4.
- * @param maxRetries - Optional. The maximum number of retries in case of errors. Defaults to 3.
- * @param retryDelay - Optional. The delay between retries in milliseconds. Defaults to 1000ms.
+ * @param config - The configuration object containing:
+ *  - senderEmail: The sender's email address.
+ *  - senderPassword: The sender's email password.
+ *  - recipientEmail: The recipient's email address.
+ *  - subject: The subject of the email.
+ *  - length: Optional. The length of the OTP to generate. Defaults to 4.
+ *  - maxRetries: Optional. The maximum number of retries in case of errors. Defaults to 3.
+ *  - retryDelay: Optional. The delay between retries in milliseconds. Defaults to 1000ms.
  *
  * @returns A promise that resolves with an object containing:
  *  - `otp`: The generated OTP as a number.
  *  - `message`: A message indicating the OTP was sent successfully.
  */
-const nodeOtpSender = (senderEmail, senderPassword, recipientEmail, subject, length = 4, maxRetries = 3, retryDelay = 1000) => {
+const nodeOtpSender = ({ senderEmail, senderPassword, recipientEmail, subject, length = 4, maxRetries = 3, retryDelay = 1000 }) => {
     return new Promise((resolve, reject) => __awaiter(void 0, void 0, void 0, function* () {
         let retries = 0;
         const retryableErrors = [
