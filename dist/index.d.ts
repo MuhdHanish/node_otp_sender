@@ -20,7 +20,7 @@ type OtpSenderConfig = {
  *  - retryDelay: Optional. The delay between retries in milliseconds. Defaults to 1000ms.
  *
  * @returns A promise that resolves with an object containing:
- *  - `otp`: The generated OTP as a number.
+ *  - `otp`: The generated OTP as a string.
  *  - `message`: A message indicating the OTP was sent successfully.
  */
 export declare const nodeOtpSender: ({ senderEmail, senderPassword, recipientEmail, subject, length, maxRetries, retryDelay }: OtpSenderConfig) => Promise<{
