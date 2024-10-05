@@ -24,7 +24,7 @@ type OtpSenderConfig = {
  *  - `message`: A message indicating the OTP was sent successfully.
  */
 export declare const nodeOtpSender: ({ senderEmail, senderPassword, recipientEmail, subject, length, maxRetries, retryDelay }: OtpSenderConfig) => Promise<{
-    otp: number;
+    otp: string;
     message: string;
 }>;
 export {};
