@@ -185,6 +185,7 @@ $RECYCLE.BIN/
 
 # Ignore TypeScript source files
 src/
+tsconfig.json
 
 # Ignore test files
 __tests__/
