@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.nodeOtpSender = exports.generateSecureOtp = void 0;
+exports.nodeOtpSender = void 0;
 const nodemailer_1 = __importDefault(require("nodemailer"));
 const crypto_1 = require("crypto");
 /**
@@ -30,7 +30,6 @@ const generateSecureOtp = (length) => {
     }
     return parseInt(otp, 10);
 };
-exports.generateSecureOtp = generateSecureOtp;
 /**
  * Sends an OTP email with a specified subject and recipient details.
  *
@@ -65,7 +64,7 @@ const nodeOtpSender = (senderEmail, senderPassword, recipientEmail, subject, len
                         pass: senderPassword,
                     },
                 });
-                const otp = (0, exports.generateSecureOtp)(length);
+                const otp = generateSecureOtp(length);
                 const mailOptions = {
                     from: senderEmail,
                     to: recipientEmail,

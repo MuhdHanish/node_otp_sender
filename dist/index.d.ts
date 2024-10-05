@@ -1,12 +1,4 @@
 /**
- * Generates a secure OTP of a specified length.
- *
- * @param length - The length of the OTP to generate.
- *
- * @returns A secure OTP as a number.
- */
-export declare const generateSecureOtp: (length: number) => number;
-/**
  * Sends an OTP email with a specified subject and recipient details.
  *
  * @param senderEmail - The sender's email address.
