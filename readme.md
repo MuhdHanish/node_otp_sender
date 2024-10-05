@@ -62,3 +62,11 @@ Make sure to replace:
 - `your-email-password` with the password of your sender email.
 - `recipient-email@example.com` with the recipient's email address.
 - `OTP Verification` with your desired subject.
+
+## Feedback
+
+If you have any feedback, please reach me at [muhammedhanish11@gmail.com](mailto:muhammedhanish11@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/muhdhanish/).
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and create a pull request with your changes. Make sure to follow the project's coding standards and include relevant tests.

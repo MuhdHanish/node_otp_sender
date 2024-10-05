@@ -1,6 +1,6 @@
 {
   "name": "node-otp-sender",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "This is a simple package that used to send email-otp using node-mailer",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MuhdHanish/Otp-Sender-Package.git"
+    "url": "git+https://github.com/MuhdHanish/node_otp_sender.git"
   },
   "keywords": [
     "node",
@@ -26,15 +26,15 @@
   "author": "Muhd Hanish",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MuhdHanish/Otp-Sender-Package/issues"
+    "url": "https://github.com/MuhdHanish/node_otp_sender/issues"
   },
-  "homepage": "https://github.com/MuhdHanish/Otp-Sender-Package#readme",
+  "homepage": "https://github.com/MuhdHanish/node_otp_sender#readme",
   "dependencies": {
     "crypto": "^1.0.1",
-    "nodemailer": "^6.9.3"
+    "nodemailer": "^6.9.15"
   },
   "devDependencies": {
-    "@types/nodemailer": "^6.4.10",
+    "@types/nodemailer": "^6.4.16",
     "typescript": "^5.6.2"
   }
 }
