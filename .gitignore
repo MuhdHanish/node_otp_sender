@@ -94,7 +94,6 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
 
 # Gatsby files
 .cache/
@@ -137,8 +136,6 @@ dist
 # Serverless Webpack directories
 .webpack/
 
-# Optional stylelint cache
-
 # SvelteKit build / generate output
 .svelte-kit
 
@@ -155,11 +152,6 @@ dist
 
 # Built Visual Studio Code Extensions
 *.vsix
-
-### VisualStudioCode Patch ###
-# Ignore all local history of files
-.history
-.ionide
 
 ### Windows ###
 # Windows thumbnail cache files
@@ -187,7 +179,18 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,node
+### Custom rules ###
+# Build output directory
 
-# Custom rules (everything added below won't be overriden by 'Generate .gitignore File' if you use 'Update' option)
 
+# Ignore TypeScript source files
+src/
+
+# Ignore test files
+__tests__/
+*.spec.ts
+*.test.ts
+
+# Package lock file for consistency in local environments
+package-lock.json
+yarn.lock
