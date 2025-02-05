@@ -183,10 +183,6 @@ $RECYCLE.BIN/
 # Build output directory
 
 
-# Ignore TypeScript source files
-src/
-tsconfig.json
-
 # Ignore test files
 __tests__/
 *.spec.ts
