@@ -34,6 +34,27 @@ const config = {
   length: 4, // Length of the OTP (default is 4)
   maxRetries: 3, // Number of retry attempts (default is 3)
   retryDelay: 1000 // Delay between retries in milliseconds (default is 1000ms)
+  getHtml: (otp: string) => `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>OTP Verification</title>
+    <style>
+      /* Whatever CSS you want to apply to your email*/
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>OTP Verification</h1>
+        <p class="otp-code">${otp}</p>
+        <p>Please use this code for verification.</p>
+        <footer>
+            <p>Thank you for using our service!</p>
+        </footer>
+    </div>
+</body>
+</html>
+`
 };
 
 const sendOtp = async () => {

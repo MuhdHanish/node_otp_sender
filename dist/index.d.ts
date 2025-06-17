@@ -6,6 +6,7 @@ type OtpSenderConfig = {
     length?: number;
     maxRetries?: number;
     retryDelay?: number;
+    getHtml?: (otp: string) => string;
 };
 /**
  * Sends an OTP email with the provided details.
@@ -23,7 +24,7 @@ type OtpSenderConfig = {
  *  - `otp`: The generated OTP as a string.
  *  - `message`: A message indicating the OTP was sent successfully.
  */
-export declare const nodeOtpSender: ({ senderEmail, senderPassword, recipientEmail, subject, length, maxRetries, retryDelay }: OtpSenderConfig) => Promise<{
+export declare const nodeOtpSender: ({ senderEmail, senderPassword, recipientEmail, subject, length, maxRetries, retryDelay, getHtml }: OtpSenderConfig) => Promise<{
     otp: string;
     message: string;
 }>;
