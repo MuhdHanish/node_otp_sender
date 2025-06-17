@@ -27,7 +27,7 @@ type OtpSenderConfig = {
     getHtml?: (otp: string) => string;
 }
 
-const defaultGetHtml = otp => `
+const defaultGetHtml = (otp: string) => `
 <!DOCTYPE html>
 <html lang="en">
 <head>
